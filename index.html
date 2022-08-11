@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio autoplay loop id="audio">
+        <source src="Source/Summoning.mp3">
+    </audio>
+    <video class="video" id="video">
+        <source src="Source/Summoning.mp4">
+    </video>
+    <span class="close" id="close">Back</span>
+    <i class="audioToggle" id="audioToggle">4</i>
+    <div class="banner">
+        <div class="banner_bg" id="gBefore">
+            <div class="banner_servant_box">
+                <img class="banner_servant" src="Source/兩儀式.png"/>
+            </div>
+            <div class="banner_title_box">
+                <div class="banner_title">FGO 天井無し Trash Gacha Simulator</div>
+                <br />
+                <div class="banner_btn_box">
+                    <audio id="btnAudio">
+                        <source src="Source/Fgo_button_SE.mp3">
+                    </audio>
+                    <div class="banner_btnl" id="btnl"><span>1</span>回召喚</div>
+                    <div class="banner_btnr" id="btnr"><span>11</span>回召喚</div>
+                </div>
+                <div class="banner_saintquartz">
+                    <img src="Source/Saintquartz.png" class="saintquartz"/> x
+                    <span id="quartz">9999</span>
+                </div>
+            </div>
+            <div class="banner_reisou_box">
+                <div class="reisou_title">霊基召喚</div>
+                <div class="banner_reisou_img_box">
+                    <img class="banner_reisou1" src="Source/gainenreisou_01.png"/>
+                    <img class="banner_reisou2" src="Source/gainenreisou_02.png"/>
+                    <img class="banner_reisou3" src="Source/gainenreisou_03.png"/>
+                    <img class="banner_reisou1" src="Source/gainenreisou_04.png"/>
+                    <img class="banner_reisou2" src="Source/gainenreisou_05.png"/>
+                    <img class="banner_reisou3" src="Source/gainenreisou_06.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="banner_draw" id="gAfter">
+            <h4 class="banner_gachaResult" id="gachaResult"></h4>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
