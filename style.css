@@ -9,6 +9,7 @@ body{
     justify-content: center;
     background: #000;
     overflow-y: hidden;
+    min-width: 950px;
 }
 .video{
     z-index: 98;
@@ -44,7 +45,7 @@ body{
     border-radius: 50%;
     font-family: webdings;
     display: fixed;
-    z-index: 2;
+    z-index: 99;
     position: absolute;
     top: 15px;
     left: 120px;
@@ -71,6 +72,8 @@ body{
         height: 100%;
         object-fit: cover;
     }
+    
+/* //////////////////////////////////////////// */
 .banner_title_box{
     min-width: 35%;
 }
@@ -117,6 +120,8 @@ body{
         cursor: pointer;
         text-shadow: 0 0 0.2em #000;
         transition: 0.5s;
+        z-index: 99;
+        position: relative;
     }
         .banner_btnl:hover{
             text-shadow: 0 0 0.4em #000;
@@ -137,6 +142,8 @@ body{
         cursor: pointer;
         text-shadow: 0 0 0.2em #000;
         transition: 0.5s;
+        z-index: 99;
+        position: relative;
     }
         .banner_btnr:hover{
             text-shadow: 0 0 0.4em #000;
@@ -144,8 +151,8 @@ body{
         .banner_btnr span{
             font-size: 3rem;
         }
+/* //////////////////////////////////////////// */
 .banner_reisou_box{
-    min-width: 35%;
     z-index: 1;
 }
 .reisou_title{
@@ -155,27 +162,34 @@ body{
     text-shadow: 0 0 0.2em #000;
     padding-right: 20px;
     font-style: italic ;
+    position: relative;
+    z-index: 99;
 }
 .banner_reisou_img_box{
     position: relative;
     top: 50%;
     transform: translateY(-60%);
 }
-    .banner_reisou1{
+.banner_reisou_img_box1{
+    margin-left: -50px;
+}
+.banner_reisou_img_box2{
+    margin-left: -50px;
+}
+    .banner_reisoul{
         width: 150px;
         transform: rotate(-10deg);
+        padding-right: -20px;
     }
-    .banner_reisou2{
+    .banner_reisoum{
         width: 175px;
         height: 275px;
-        margin-left: -20px;
         transform: rotate(5deg);
+        padding-right: -20px;
     }
-    .banner_reisou3{
+    .banner_reisour{
         width: 150px;
         height: 250px;
-        margin-left: -20px;
-        margin-bottom: -50px;
         transform: rotate(20deg);
     }
 
@@ -195,3 +209,30 @@ body{
         flex-direction: column;
         -webkit-text-stroke: 1px #000;
     }
+
+@media (max-width:1490px) {
+    .banner_reisou_box{
+        display: none;
+    }
+    .banner_btn_box{
+        top: 40%;
+    }
+}
+@media (max-width:976px){
+    .banner_saintquartz{
+        width: 40%
+    }
+}
+
+@media (max-width:815px){
+    .banner_btn_box{
+        flex-direction: column;
+        width: 70%
+    }
+    .banner_saintquartz{
+        margin: -40px 0
+    }
+    .banner_btnr{
+        margin: 20px 0;
+    }
+}
