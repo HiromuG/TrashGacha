@@ -1,7 +1,7 @@
 let btnl = document.getElementById("btnl");
 let btnr = document.getElementById("btnr");
 let btnAudio = document.getElementById("btnAudio");
-btnAudio.volume = 0.5;
+btnAudio.volume = 0.2;
 let gBefore = document.getElementById("gBefore");
 let gAfter = document.getElementById("gAfter");
 let gachaResult = document.getElementById("gachaResult");
@@ -9,7 +9,6 @@ let close = document.getElementById("close");
 let video = document.getElementById("video");
 let audio = document.getElementById("audio");
 audio.volume = 0.5;
-let audioToggle = document.getElementById("audioToggle");
 let quartz = document.getElementById("quartz");
 
 let closeVideo;
@@ -36,10 +35,8 @@ function gAfterShow(){
 function playMusic() {
     if (audio.paused) {
         audio.play();
-        audioToggle.innerText = ";";
     } else {
         audio.pause();
-        audioToggle.innerText = "4";
     }
 }
 close.addEventListener("click",function(){
@@ -64,16 +61,7 @@ btnr.addEventListener("click",function(){
     videoClose();
     gAfterShow();
 })
-audioToggle.addEventListener("click",function(){
-    playMusic();
-})
 
-// let items = 
-//     [PUSSRServant,SSRServant,
-//     PUSSRReisou,SSRReisou,
-//     PUSRServant,SRServant,
-//     PUSRReisou,SRReisou,
-//     RServant,RReisou];
 // let itemsWeight = 
 //     [0.8,1.0,
 //     2.8,4.0,
@@ -122,34 +110,24 @@ function gacha(){
                             Star3Rei.append("★★★以下礼装");
     if(rand <= 0.8){
         gachaResult.appendChild(puStar5Ser);
-        // gachaResult.append("PU★★★★★サーヴァント");
     }else if(rand > 0.8 && rand <= 1.8){
         gachaResult.appendChild(Star5Ser);
-        // gachaResult.append("★★★★★サーヴァント");
     }else if(rand > 1.8 && rand <= 4.6){
         gachaResult.appendChild(puStar5Rei);
-        // gachaResult.append("PU★★★★★礼装");
     }else if(rand > 4.6 && rand <= 8.6){
         gachaResult.appendChild(Star5Rei);
-        // gachaResult.append("★★★★★礼装");
     }else if(rand > 8.6 && rand <= 10.1){
         gachaResult.appendChild(puStar4Ser);
-        //gachaResult.append("PU★★★★サーヴァント");
     }else if(rand > 10.1 && rand <= 13.1){
         gachaResult.appendChild(Star4Ser);
-        //gachaResult.append("★★★★サーヴァント");
     }else if(rand > 13.1 && rand <= 17.1){
         gachaResult.appendChild(puStar4Rei);
-        //gachaResult.append("PU★★★★礼装");
     }else if(rand > 17.1 && rand <= 29){
         gachaResult.appendChild(Star4Rei);
-        //gachaResult.append("★★★★礼装");
     }else if(rand > 29 && rand <= 39){
         gachaResult.appendChild(Star3Ser);
-        //gachaResult.append("★★★以下サーヴァント");
     }else if(rand > 39 && rand <= 100){
         gachaResult.appendChild(Star3Rei);
-        //gachaResult.append("★★★以下礼装");
     }
 }
 function getRandomSingle(){
