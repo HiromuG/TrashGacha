@@ -1,12 +1,13 @@
 let btnl = document.getElementById("btnl");
 let btnr = document.getElementById("btnr");
 let btnAudio = document.getElementById("btnAudio");
-btnAudio.volume = 0.2;
+btnAudio.volume = 0.1;
 let gBefore = document.getElementById("gBefore");
 let gAfter = document.getElementById("gAfter");
 let gachaResult = document.getElementById("gachaResult");
 let close = document.getElementById("close");
 let video = document.getElementById("video");
+video.volume = 0.3;
 let audio = document.getElementById("audio");
 audio.volume = 0.5;
 let quartz = document.getElementById("quartz");
